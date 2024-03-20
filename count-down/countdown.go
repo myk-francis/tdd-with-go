@@ -1,10 +1,19 @@
 package main
 
 import (
-	"bytes"
 	"fmt"
+	"io"
+	"os"
 )
 
-func CountDown(out *bytes.Buffer) {
-	fmt.Fprint(out, "3")
+func CountDown(out io.Writer) {
+	for i := 3; i > 0; i-- {
+		fmt.Fprintln(out, i)
+	}
+
+	fmt.Fprint(out, "Go!")
+}
+
+func main()  {
+	CountDown(os.Stdout)
 }
