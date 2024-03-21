@@ -12,9 +12,9 @@ func TestCountDown(t *testing.T) {
 
 	got := buffer.String()
 	want := `3
-	2
-	1
-	/tGo!`
+2
+1
+Go!`
 
 	if got != want {
 		t.Errorf("got %q want %q", got, want)

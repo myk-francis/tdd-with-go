@@ -6,6 +6,10 @@ import (
 	"os"
 )
 
+type Sleeper interface {
+	Sleep()
+}
+
 func CountDown(out io.Writer) {
 	for i := 3; i > 0; i-- {
 		fmt.Fprintln(out, i)
