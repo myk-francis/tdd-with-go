@@ -15,7 +15,7 @@ func TestWalk(t *testing.T) {
 			got = append(got, input)
 		})
 
-		if len(got) != 1 {
+		if got[0] != expected {
 			t.Errorf("wrong number of function calls, got %q want %q", got[0], expected)
 		}
 	})
