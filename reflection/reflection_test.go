@@ -6,22 +6,22 @@ import (
 )
 
 func TestWalk(t *testing.T) {
-	t.Run("initial test", func(t *testing.T) {
-		expected := "Chris"
-		var got []string
+	// t.Run("initial test", func(t *testing.T) {
+	// 	expected := "Chris"
+	// 	var got []string
 
-		x := struct {
-			Name string
-		}{expected}
+	// 	x := struct {
+	// 		Name string
+	// 	}{expected}
 
-		walk(x, func(input string) {
-			got = append(got, input)
-		})
+	// 	walk(x, func(input string) {
+	// 		got = append(got, input)
+	// 	})
 
-		if got[0] != expected {
-			t.Errorf("wrong number of function calls, got %q want %q", got[0], expected)
-		}
-	})
+	// 	if got[0] != expected {
+	// 		t.Errorf("wrong number of function calls, got %q want %q", got[0], expected)
+	// 	}
+	// })
 
 	cases := []struct {
 		Name string
@@ -32,7 +32,7 @@ func TestWalk(t *testing.T) {
 			"Struct with one string field",
 			struct {
 				Name string
-			}{"Chris"},
+			}{"Mike"},
 			[]string{"Chris"},
 		},
 	}
